@@ -11,3 +11,6 @@ PROCESSED=os.path.join(DATA,"processed/")
 
 #
 LOGS=os.path.join(ROOT_DIR,"Logs")
+
+#models
+MODELS=os.path.join(ROOT_DIR,"assets/models")
