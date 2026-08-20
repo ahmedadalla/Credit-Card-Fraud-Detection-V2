@@ -218,8 +218,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
 # data files
 *.csv
-#model
+
+# model
 *.pkl
 *.onnx
+
+#logs
+*.log
