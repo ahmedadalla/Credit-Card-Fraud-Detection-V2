@@ -14,7 +14,7 @@ def create_sampler(
     random_state=42
 ):
     if strategy == "none":
-        return "passthrough"
+        return None
 
     if strategy == "under":
         return RandomUnderSampler(

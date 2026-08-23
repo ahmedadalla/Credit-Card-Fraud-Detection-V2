@@ -4,13 +4,13 @@ import joblib
 
 MODELS=Paths.MODELS
 def save_model(model, name):
-    path = MODELS / name
+    path = MODELS +'/'+ name
 
     with open(path, "wb") as file:
         joblib.dump(model, file)
 
 def load_model(name):
-    path = MODELS / name
+    path = MODELS +'/'+ name+"_pip.pkl"
     return joblib.load(path)
 
 def get_model_params(name):
@@ -26,3 +26,13 @@ def get_model_params(name):
 def set_model_params(model, params):
     model.set_params(**params)
     return model
+
+def get_grid(name):
+    if name=='lg':
+        return config.grid.logistic_regression
+    elif name == 'rf':
+        return config.grid.random_forest
+    elif name == 'nn':
+        return config.grid.mlp
+    elif name=="knn":
+        return config.grid.knn
